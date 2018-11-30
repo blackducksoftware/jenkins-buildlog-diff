@@ -8,7 +8,7 @@ import json
 import jenkinsLogDiffConfig as conf
 
 # Turn off https warnings & verification
-if conf.ignoreHttpsWarnings:
+if not conf.httpsWarnings:
   from requests.packages.urllib3.exceptions import InsecureRequestWarning
   requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 httpsVerification=conf.httpsVerification
